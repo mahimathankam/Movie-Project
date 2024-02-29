@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<center><h2>ADD MOVIE</h2>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <table>
+    {{form|crispy}}
+        </table>
+    <input type="submit">
+</form>
+</center>
+{% endblock %}
